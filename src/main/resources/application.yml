@@ -1,0 +1,17 @@
+management:
+  security:
+    enabled: false
+---
+spring:
+  profiles: test
+server:
+  port: 8888
+  servlet:
+    context-path: /sample
+---
+spring:
+  profiles: dev
+server:
+  port: 9999
+  servlet:
+    context-path: /sample
