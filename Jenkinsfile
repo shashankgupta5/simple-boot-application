@@ -4,7 +4,6 @@ pipeline {
         stage('Checkout SCM') {
             steps {
                 script {
-//                    echo 'Pulling...' + env.BRANCH_NAME   
                     git 'https://github.com/shashankgupta5/simple-boot-application'
                 }
             }
