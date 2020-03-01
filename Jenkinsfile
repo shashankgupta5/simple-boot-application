@@ -19,7 +19,7 @@ pipeline {
         stage('Archive Lib') {
             steps {
                 script {
-                     archiveArtifacts 'target/'
+                      archiveArtifacts artifacts: 'target/', onlyIfSuccessful: true
                 }
             }
         }
