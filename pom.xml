@@ -89,7 +89,7 @@
 
     <profiles>
         <profile>
-            <id>code-ut-coverage</id>
+            <id>create-it-coverage</id>
             <build>
                 <plugins>
                     <plugin>

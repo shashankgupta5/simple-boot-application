@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-mvn clean install -Pcode-ut-coverage
+mvn clean install -Pcreate-ut-coverage
