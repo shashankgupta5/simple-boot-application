@@ -7,22 +7,18 @@ import org.springframework.web.bind.annotation.RestController;
 import spring.service.WelcomeService;
 
 @RestController
-public class WelcomeController extends BaseController {
+public class WelcomeController {
 
-	private WelcomeService welcomeService;
+    @Autowired
+    private WelcomeService welcomeService;
 
-	@Autowired
-	public WelcomeController(WelcomeService welcomeService) {
-		this.welcomeService = welcomeService;
-	}
+    @GetMapping(value = {"/welcome"})
+    public String welcome(@RequestParam("userName") String userName) {
+        return welcomeService.getGreetUserMessage(userName);
+    }
 
-	@GetMapping(value = {"/welcome", "/"})
-	public String welcome(@RequestParam("userName") String userName) {
-		return welcomeService.getGreetUserMessage(userName);
-	}
-
-	@GetMapping(value = {"/status", "/health"})
-	public String healthCheck() {
-		return "Application is running :)";
-	}
+    @GetMapping(value = {"/status", "/health"})
+    public String healthCheck() {
+        return "Application is running :)";
+    }
 }

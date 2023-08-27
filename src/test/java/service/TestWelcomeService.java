@@ -1,11 +1,11 @@
 package service;
 
-import static org.mockito.Mockito.mock;
-
 import org.mockito.Mockito;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import spring.service.WelcomeService;
+
+import static org.mockito.Mockito.mock;
 
 public class TestWelcomeService {
 

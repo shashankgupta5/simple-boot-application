@@ -9,7 +9,7 @@ import spring.app.StandaloneContextInitializer;
 @SpringBootApplication
 public class StandaloneApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(StandaloneApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(StandaloneApplication.class, args);
+    }
 }
